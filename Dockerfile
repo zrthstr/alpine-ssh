@@ -6,6 +6,8 @@ RUN apk update && apk add openssh
 
 RUN echo "Welcome to Alpine! <http://wiki.alpinelinux.org>" > /etc/motd
 
+RUN echo "PubkeyAcceptedKeyTypes=+ssh-dss" > /etc/ssh/ssh_config
+
 RUN echo "PasswordAuthentication no" > /etc/ssh/sshd_config \
 	&& echo "Protocol 2" >> /etc/ssh/sshd_config
 	
