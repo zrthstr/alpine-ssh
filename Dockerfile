@@ -5,7 +5,8 @@ MAINTAINER polandj
 RUN apk update && apk add openssh 
 
 RUN echo "PasswordAuthentication no" > /etc/ssh/sshd_config \
-	&& echo "UsePrivilegeSeparation sandbox" >> /etc/ssh/sshd_config
+	&& echo "UsePrivilegeSeparation sandbox" >> /etc/ssh/sshd_config \
+	&& echo "Protocol 2" >> /etc/ssh/sshd_config
 	
 RUN echo "KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256" >> /etc/ssh/sshd_config \
   	&& echo "Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr" >> /etc/ssh/sshd_config \
