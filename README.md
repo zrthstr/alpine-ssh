@@ -2,7 +2,7 @@
 Alpine Linux docker image with SSH support.
 
 ## Features
- - Allows *ONLY* key-based authentication
+ - Allows **ONLY** key-based authentication
  - Uses hardened SSHD config from https://cipherli.st
  - SSHD logs to stderr, so errors are visible in docker log
 
