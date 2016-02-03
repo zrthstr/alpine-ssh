@@ -13,4 +13,4 @@ rc-status
 touch /run/openrc/softlevel
 ssh-keygen -A
 
-exec /usr/sbin/sshd -D
+exec /usr/sbin/sshd -D -e
