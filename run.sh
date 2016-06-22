@@ -9,8 +9,6 @@ mkdir -p /root/.ssh/
 echo ${AUTHORIZED_KEYS} > /root/.ssh/authorized_keys
 chmod 600 /root/.ssh/authorized_keys
 
-rc-status
-touch /run/openrc/softlevel
 ssh-keygen -A
 
 exec /usr/sbin/sshd -D -e
