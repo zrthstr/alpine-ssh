@@ -13,7 +13,7 @@ RUN echo "Protocol 2" > /etc/ssh/sshd_config \
 	&& echo "ChallengeResponseAuthentication no" >> /etc/ssh/sshd_config \
 	&& echo "PubkeyAuthentication yes" >> /etc/ssh/sshd_config \
 	&& echo "HostKey /etc/ssh/ssh_host_ed25519_key" >> /etc/ssh/sshd_config \
-	&& echo "HostKey /etc/ssh/ssh_host_rsa_key" >> /etc/sshd_config
+	&& echo "HostKey /etc/ssh/ssh_host_rsa_key" >> /etc/ssh/sshd_config
 	
 RUN echo "KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256" >> /etc/ssh/sshd_config
 RUN echo "Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr" >> /etc/ssh/sshd_config
